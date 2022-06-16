@@ -9,6 +9,7 @@
 #If it's a tie (the computer and player pick the same move), restart the game
 
 #import random module to make a choice for CPU player
+from multiprocessing import RLock
 import random
 
 #while statement:ask player if they want to play again after each round. break at the end to quit the game
@@ -24,43 +25,36 @@ while player not in choices:
 
 #check if computer choice matches player choice and print "tie"
 if player == computer:
-    print("computer: ",computer)
-    print("player: ",player)
+    print("player (",player + " )" " : " + "computer (",computer + " )" )
     print("You tie! Continue playing")
     player = input("rock, paper, or scissors?: ").lower() 
 
 #If player chooses rock while computer chooses paper, player loses.Player wins if computer chooses scissors
 elif player == "rock":
     if computer == "paper":
-        print("computer: ", computer)
-        print("player: ", player)
+        print("player (",player + " )" " : " + "computer (",computer + " )" )
         print("---GAME OVER!! Computer wins.You lost!")
     
     if computer == "scissors":
-        print("computer: ", computer)
-        print("player: ", player)
+        print("player (",player + " )" " : " + "computer (",computer + " )" )
         print("Congratulations!! You are the winner! ---GAME OVER!!--- ")
 
 #If player chooses scissors while computer chooses rock, player loses.Player wins if computer chooses paper
 elif player == "scissors":
     if computer == "rock":
-        print("computer: ", computer)
-        print("player: ", player)
+        print("player (",player + " )" " : " + "computer (",computer + " )" )
         print("---GAME OVER!! Computer wins.You lost!")
     if computer == "paper":
-        print("computer: ", computer)
-        print("player: ", player)
+        print("player (",player + " )" " : " + "computer (",computer + " )" )
         print("Congratulations!! You are the winner! ---GAME OVER!!--- ")
 
 #If player chooses paper while computer chooses scissors, player loses.Player wins if computer chooses rock
 elif player == "paper":
     if computer == "scissors":
-        print("computer: ", computer)
-        print("player: ", player)
+        print("player (",player + " )" " : " + "computer (",computer + " )" )
         print("---GAME OVER!! Computer wins.You lost!")
     if computer == "rock":
-        print("computer: ", computer)
-        print("player: ", player)
+        print("player (",player + " )" " : " + "computer (",computer + " )" )
         print("Congratulations!! You are the winner! ---GAME OVER!!--- ")
         
 
