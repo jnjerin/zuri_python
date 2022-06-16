@@ -1,6 +1,6 @@
 #Rock-Paper-Scissors game
 #Create the different options
-#Ask the user to pick an option between "R", "P" or "S"
+#Ask the user to pick an option between "rock", "paper" or "scissors"
 #If user input is invalid (not amongst our options), print an error, and ask for their input again
 #Use the `choice` function from the inbuilt Python `random` module to make a choice for CPU player(computer).
 #Print both player's moves in the format: `Player (Rock) : CPU (Paper)`
@@ -9,7 +9,6 @@
 #If it's a tie (the computer and player pick the same move), restart the game
 
 #import random module to make a choice for CPU player
-from multiprocessing import RLock
 import random
 
 #while statement:ask player if they want to play again after each round. break at the end to quit the game
